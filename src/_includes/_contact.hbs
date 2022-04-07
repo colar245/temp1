@@ -21,7 +21,18 @@
           <h5>Send Us A Message</h5>
 
           <!-- form -->
-          <form name="contactForm" id="contactForm" method="post" data-netlify="true">
+          <form 
+            name="contactForm" 
+            id="contactForm" 
+            method="post" 
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <p class="hide">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
             <div class="form-field">
               <input
                 name="contactName"
@@ -87,12 +98,12 @@
           <!-- end form -->
 
           <!-- contact-warning -->
-          <div id="message-warning"></div>
+          <!--div id="message-warning"></div-->
 
           <!-- contact-success -->
-          <div id="message-success">
+          <!--div id="message-success">
             <i class="fa fa-check"></i>Your message was sent, thank you!<br />
-          </div>
+          </div-->
         </div>
         <!-- end col-seven -->
 
