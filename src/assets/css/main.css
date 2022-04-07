@@ -34,9 +34,12 @@
 @import url("fonts.css");
 
 /* ===================================================================
- *  02. base style overrides - (_document-setup)
- *
- * ------------------------------------------------------------------- */
+  *  02. base style overrides - (_document-setup)
+  *
+  * ------------------------------------------------------------------- */
+:root {
+  --main-color: #f9a828;
+}
 html {
   font-size: 10px;
 }
@@ -72,8 +75,8 @@ body {
 }
 
 /* ------------------------------------------------------------------- 
- * links - (_document-setup) 
- * ------------------------------------------------------------------- */
+  * links - (_document-setup) 
+  * ------------------------------------------------------------------- */
 a,
 a:visited {
   color: #07617d;
@@ -90,9 +93,9 @@ a:focus {
 }
 
 /* ===================================================================
- *  03. typography & general theme styles - (_document-setup.scss) 
- *
- * ------------------------------------------------------------------- */
+  *  03. typography & general theme styles - (_document-setup.scss) 
+  *
+  * ------------------------------------------------------------------- */
 h1,
 h2,
 h3,
@@ -326,8 +329,8 @@ hr {
 }
 
 /* ------------------------------------------------------------------- 
- * Lists - (_document-setup.scss)  
- * ------------------------------------------------------------------- */
+  * Lists - (_document-setup.scss)  
+  * ------------------------------------------------------------------- */
 ol {
   list-style: decimal;
 }
@@ -385,8 +388,8 @@ dd {
 }
 
 /* ------------------------------------------------------------------- 
- * Spacing - (_document-setup)  
- * ------------------------------------------------------------------- */
+  * Spacing - (_document-setup)  
+  * ------------------------------------------------------------------- */
 button,
 .button {
   margin-bottom: 1.2rem;
@@ -414,8 +417,8 @@ form,
 }
 
 /* ------------------------------------------------------------------- 
- * floated image - (_document-setup)  
- * ------------------------------------------------------------------- */
+  * floated image - (_document-setup)  
+  * ------------------------------------------------------------------- */
 img.pull-right {
   margin: 1.5rem 0 0 3rem;
 }
@@ -425,8 +428,8 @@ img.pull-left {
 }
 
 /* ------------------------------------------------------------------- 
- * block grids paddings
- * ------------------------------------------------------------------- */
+  * block grids paddings
+  * ------------------------------------------------------------------- */
 .bgrid {
   padding: 0 20px;
 }
@@ -452,8 +455,8 @@ img.pull-left {
 }
 
 /* ------------------------------------------------------------------- 
- * tables - (_document-setup.scss)  
- * ------------------------------------------------------------------- */
+  * tables - (_document-setup.scss)  
+  * ------------------------------------------------------------------- */
 table {
   border-width: 0;
   width: 100%;
@@ -493,8 +496,8 @@ td:last-child {
 }
 
 /* ------------------------------------------------------------------- 
- * pace.js styles - minimal  - (_document-setup.scss)
- * ------------------------------------------------------------------- */
+  * pace.js styles - minimal  - (_document-setup.scss)
+  * ------------------------------------------------------------------- */
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
@@ -508,7 +511,7 @@ td:last-child {
 }
 
 .pace .pace-progress {
-  background: #f9a828;
+  background: var(--main-color);
   position: fixed;
   z-index: 900;
   top: 0;
@@ -518,9 +521,9 @@ td:last-child {
 }
 
 /* ===================================================================
- *  04. Preloader
- *
- * ------------------------------------------------------------------- */
+  *  04. Preloader
+  *
+  * ------------------------------------------------------------------- */
 #preloader {
   position: fixed;
   top: 0;
@@ -547,7 +550,7 @@ td:last-child {
   margin-left: -30px;
   margin-top: -30px;
   padding: 0;
-  background-color: #f9a828;
+  background-color: var(--main-color);
   border-radius: 100%;
   -webkit-animation: sk-scaleout 1s infinite ease-in-out;
   animation: sk-scaleout 1s infinite ease-in-out;
@@ -575,9 +578,9 @@ td:last-child {
 }
 
 /* ===================================================================
- *  05. forms - (_forms.scss)
- *
- * ------------------------------------------------------------------- */
+  *  05. forms - (_forms.scss)
+  *
+  * ------------------------------------------------------------------- */
 fieldset {
   border: none;
 }
@@ -700,8 +703,8 @@ label > input[type="radio"] {
 }
 
 /* ------------------------------------------------------------------- 
- * Style Placeholder Text - (_forms.scss)
- * ------------------------------------------------------------------- */
+  * Style Placeholder Text - (_forms.scss)
+  * ------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
   color: #8e8e8e;
 }
@@ -725,8 +728,8 @@ label > input[type="radio"] {
 }
 
 /* ------------------------------------------------------------------- 
- * Change Autocomplete styles in Chrome - (_forms.scss)
- * ------------------------------------------------------------------- */
+  * Change Autocomplete styles in Chrome - (_forms.scss)
+  * ------------------------------------------------------------------- */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus input:-webkit-autofill,
@@ -741,9 +744,9 @@ select:-webkit-autofill:focus {
 }
 
 /* ===================================================================
- *  06. buttons - (_button-essentials.scss)
- *
- * ------------------------------------------------------------------- */
+  *  06. buttons - (_button-essentials.scss)
+  *
+  * ------------------------------------------------------------------- */
 .button,
 a.button,
 button,
@@ -852,8 +855,8 @@ button.stroke.large,
 
 button.stroke:hover,
 .button.stroke:hover {
-  border: 3px solid #f9a828;
-  color: #f9a828;
+  border: 3px solid var(--main-color);
+  color: var(--main-color);
 }
 
 button::-moz-focus-inner,
@@ -863,14 +866,14 @@ input::-moz-focus-inner {
 }
 
 /* ===================================================================
- *  07. other components - (_others.scss)
- *
- * ------------------------------------------------------------------- */
+  *  07. other components - (_others.scss)
+  *
+  * ------------------------------------------------------------------- */
 
 /**
- * alert box - (_alert-box.scss)
- * -------------------------------------------------------------------
- */
+  * alert box - (_alert-box.scss)
+  * -------------------------------------------------------------------
+  */
 .alert-box {
   padding: 2.1rem 4rem 2.1rem 3rem;
   position: relative;
@@ -907,10 +910,10 @@ input::-moz-focus-inner {
 }
 
 /* ------------------------------------------------------------------- 
- * additional typo styles - (_additional-typo.scss)
- * ------------------------------------------------------------------- */
+  * additional typo styles - (_additional-typo.scss)
+  * ------------------------------------------------------------------- */
 /* drop cap 
- * ----------------------------------------------- */
+  * ----------------------------------------------- */
 .drop-cap:first-letter {
   float: left;
   margin: 0;
@@ -924,7 +927,7 @@ input::-moz-focus-inner {
 }
 
 /* line definition style 
- * ----------------------------------------------- */
+  * ----------------------------------------------- */
 .lining dt,
 .lining dd {
   display: inline;
@@ -947,7 +950,7 @@ input::-moz-focus-inner {
 }
 
 /* dictionary definition style 
- * ----------------------------------------------- */
+  * ----------------------------------------------- */
 .dictionary-style dt {
   display: inline;
   counter-reset: definitions;
@@ -965,17 +968,17 @@ input::-moz-focus-inner {
 }
 
 /** 
- * Pull Quotes
- * -----------
- * markup:
- *
- * <aside class="pull-quote">
- *		<blockquote>
- *			<p></p>
- *		</blockquote>
- *	</aside>
- *
- * --------------------------------------------------------------------- */
+  * Pull Quotes
+  * -----------
+  * markup:
+  *
+  * <aside class="pull-quote">
+  *		<blockquote>
+  *			<p></p>
+  *		</blockquote>
+  *	</aside>
+  *
+  * --------------------------------------------------------------------- */
 .pull-quote {
   position: relative;
   padding: 2.1rem 3rem 2.1rem 0px;
@@ -1006,17 +1009,17 @@ input::-moz-focus-inner {
 }
 
 /** 
- * Stats Tab
- * ---------
- * markup:
- *
- * <ul class="stats-tabs">
- *		<li><a href="#">[value]<em>[name]</em></a></li>
- *	</ul>
- *
- * Extend this object into your markup.
- *
- * --------------------------------------------------------------------- */
+  * Stats Tab
+  * ---------
+  * markup:
+  *
+  * <ul class="stats-tabs">
+  *		<li><a href="#">[value]<em>[name]</em></a></li>
+  *	</ul>
+  *
+  * Extend this object into your markup.
+  *
+  * --------------------------------------------------------------------- */
 .stats-tabs {
   padding: 0;
   margin: 3rem 0;
@@ -1051,9 +1054,9 @@ input::-moz-focus-inner {
 }
 
 /**
- * skillbars - (_skillbars.scss)
- * -------------------------------------------------------------------
- */
+  * skillbars - (_skillbars.scss)
+  * -------------------------------------------------------------------
+  */
 .skill-bars {
   list-style: none;
   margin: 6rem 0 3rem;
@@ -1167,9 +1170,9 @@ input::-moz-focus-inner {
 }
 
 /* ===================================================================
- *  08. common and reusable styles 
- *
- * ------------------------------------------------------------------- */
+  *  08. common and reusable styles 
+  *
+  * ------------------------------------------------------------------- */
 .section-intro {
   text-align: center;
   position: relative;
@@ -1208,9 +1211,9 @@ input::-moz-focus-inner {
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * section-intro
- * ------------------------------------------------------------------- */
+  * responsive:
+  * section-intro
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
   .section-intro h1 {
     font-size: 4.4rem;
@@ -1265,9 +1268,9 @@ input::-moz-focus-inner {
 }
 
 /* ===================================================================
- *  09. header styles - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  09. header styles - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 header {
   width: 100%;
   height: auto;
@@ -1283,8 +1286,8 @@ header .row {
 }
 
 /* ------------------------------------------------------------------- 
- * header logo - (_layout.css) 
- * ------------------------------------------------------------------- */
+  * header logo - (_layout.css) 
+  * ------------------------------------------------------------------- */
 header .header-logo {
   position: absolute;
   left: 32px;
@@ -1303,7 +1306,7 @@ header .header-logo a {
   border: none;
   width: 6.5vw;
   height: 6.5vw;
-  background: url("../images/fabrika.svg") no-repeat center;
+  background: url("../images/logo\.png") no-repeat center;
   background-size: contain;
   font: 0/0 a;
   text-shadow: none;
@@ -1316,8 +1319,8 @@ header .header-logo a {
 }
 
 /* ------------------------------------------------------------------- 
- * menu trigger - (_layout.css) 
- * ------------------------------------------------------------------- */
+  * menu trigger - (_layout.css) 
+  * ------------------------------------------------------------------- */
 #header-menu-trigger {
   display: block;
   position: fixed;
@@ -1388,8 +1391,8 @@ header .header-logo a {
 }
 
 /* ------------------------------------------------------------------- 
- * off-canvas menu - (_layout.scss) 
- * ------------------------------------------------------------------- */
+  * off-canvas menu - (_layout.scss) 
+  * ------------------------------------------------------------------- */
 #menu-nav-wrap {
   background: #0c0c0c;
   color: rgba(255, 255, 255, 0.25);
@@ -1529,9 +1532,9 @@ header .header-logo a {
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * header section 
- * ------------------------------------------------------------------- */
+  * responsive:
+  * header section 
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
   header .header-logo a {
     width: 75px;
@@ -1545,9 +1548,9 @@ header .header-logo a {
 }
 
 /* ===================================================================
- *  10. home - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  10. home - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #home {
   width: 100%;
   height: 100%;
@@ -1720,9 +1723,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * home section 
- * ------------------------------------------------------------------- */
+  * responsive:
+  * home section 
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
   .home-content-tablecell h3 {
     font-size: 2.1rem;
@@ -1823,9 +1826,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  11. about - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  11. about - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #about {
   position: relative;
   padding: 4.2rem 0 12rem;
@@ -1865,9 +1868,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * about 
- * ------------------------------------------------------------------- */
+  * responsive:
+  * about 
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
   #about {
     min-height: 636px;
@@ -1931,9 +1934,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  12. services - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  12. services - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #services {
   background-color: #19191b;
   background-image: url(../images/services-bg.jpg);
@@ -2009,7 +2012,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 #services .services-list .icon i {
   font-size: 5.4rem;
-  color: #f9a828;
+  color: var(--main-color);
 }
 #services .services-list .h05 {
   font-size: 1.7rem;
@@ -2019,9 +2022,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * services
- * ------------------------------------------------------------------- */
+  * responsive:
+  * services
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
   #services .services-list .service-item {
     padding: 0 40px;
@@ -2061,9 +2064,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  13. portfolio - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  13. portfolio - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #portfolio {
   background: #ffffff;
   min-height: 800px;
@@ -2105,8 +2108,8 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * masonry entries - (_layout.css) 
- * ------------------------------------------------------------------- */
+  * masonry entries - (_layout.css) 
+  * ------------------------------------------------------------------- */
 .bricks-wrapper .item-wrap {
   position: relative;
   overflow: hidden;
@@ -2252,14 +2255,14 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * Light Gallery Overrides - (_layout.css) 
- * ------------------------------------------------------------------- */
+  * Light Gallery Overrides - (_layout.css) 
+  * ------------------------------------------------------------------- */
 .lg-sub-html {
   padding: 12px 20% 15px;
 }
 .lg-sub-html a,
 .lg-sub-html a:visited {
-  color: #f9a828;
+  color: var(--main-color);
 }
 .lg-sub-html a:hover,
 .lg-sub-html a:focus {
@@ -2293,7 +2296,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 
 .lg-outer .lg-thumb-item.active,
 .lg-outer .lg-thumb-item:hover {
-  border-color: #f9a828;
+  border-color: var(--main-color);
 }
 
 .lg-progress-bar .lg-progress {
@@ -2305,9 +2308,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * portfolio
- * ------------------------------------------------------------------- */
+  * responsive:
+  * portfolio
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
   #portfolio .intro-wrap {
     padding: 12rem 0 21rem;
@@ -2326,9 +2329,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  14. testimonials - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  14. testimonials - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #testimonials {
   background: #ffffff;
   padding: 12rem 0 7.8rem;
@@ -2442,9 +2445,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * testimonials
- * ------------------------------------------------------------------- */
+  * responsive:
+  * testimonials
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1024px) {
   #testimonial-slider p {
     font-size: 2.8rem;
@@ -2494,9 +2497,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  15. clients - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  15. clients - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #clients {
   background-color: #e9eaea;
   padding: 4.8rem 0 4.8rem;
@@ -2568,9 +2571,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  16. contact - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  16. contact - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 #contact {
   background-color: #111111;
   background-image: url(../images/contact-bg.jpg);
@@ -2650,7 +2653,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
   padding: 0.6rem 2rem 0.6rem 2rem;
   margin: 0;
   color: #000000;
-  background: #f9a828;
+  background: var(--main-color);
   border-radius: 3px;
 }
 #contact form .form-field label::after {
@@ -2660,7 +2663,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
   margin-top: -6px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-bottom: 5px solid #f9a828;
+  border-bottom: 5px solid var(--main-color);
   content: "";
 }
 #contact form ::-webkit-input-placeholder {
@@ -2713,7 +2716,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
   line-height: 6rem;
   padding: 0 3rem;
   width: 100%;
-  background: #f9a828;
+  background: var(--main-color);
   color: #000000;
   margin-top: 0.6rem;
 }
@@ -2736,7 +2739,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 #message-success {
-  color: #f9a828;
+  color: var(--main-color);
 }
 
 #message-warning i,
@@ -2771,8 +2774,8 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* --------------------------------------------------------------- 
- * loader animation - (_layout.scss)
- * --------------------------------------------------------------- */
+  * loader animation - (_layout.scss)
+  * --------------------------------------------------------------- */
 .s-loader {
   margin: 1.2rem auto 3rem;
   width: 70px;
@@ -2832,9 +2835,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
   }
 }
 /* ------------------------------------------------------------------- 
- * responsive:
- * contact 
- * ------------------------------------------------------------------- */
+  * responsive:
+  * contact 
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 900px) {
   .contact-info {
     width: 38%;
@@ -2868,9 +2871,9 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
 }
 
 /* ===================================================================
- *  17. footer - (_layout.scss)
- *
- * ------------------------------------------------------------------- */
+  *  17. footer - (_layout.scss)
+  *
+  * ------------------------------------------------------------------- */
 footer {
   margin: 0 0 5.4rem 0;
   padding: 0;
@@ -2883,7 +2886,7 @@ footer a:visited {
 }
 footer a:hover,
 footer a:focus {
-  color: #f9a828;
+  color: var(--main-color);
 }
 footer .row {
   max-width: 1024px;
@@ -2906,7 +2909,7 @@ footer h4.h05::after {
 }
 
 /* footer main
- * --------------------------------- */
+  * --------------------------------- */
 .footer-main {
   padding-top: 9.6rem;
   padding-bottom: 3rem;
@@ -2942,7 +2945,7 @@ footer h4.h05::after {
   background-color: rgba(0, 0, 0, 0.9);
 }
 .footer-main #mc-form button {
-  background-color: #f9a828;
+  background-color: var(--main-color);
   color: #000000;
   width: 6rem;
   height: 6rem;
@@ -2964,12 +2967,12 @@ footer h4.h05::after {
   left: 0.2rem;
 }
 .footer-main #mc-form label {
-  color: #f9a828;
+  color: var(--main-color);
   font-family: "montserrat-regular", sans-serif;
 }
 
 /* footer bottom
- * --------------------------------- */
+  * --------------------------------- */
 .footer-bottom {
   margin-top: 3rem;
   text-align: center;
@@ -3029,9 +3032,9 @@ footer h4.h05::after {
 }
 
 /* ------------------------------------------------------------------- 
- * responsive:
- * footer
- * ------------------------------------------------------------------- */
+  * responsive:
+  * footer
+  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 768px) {
   #go-top {
     bottom: 0;
