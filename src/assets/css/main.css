@@ -1620,7 +1620,7 @@ header .header-logo a {
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 2.4rem;
+  font-size: 3rem;
   line-height: 1.75;
   text-align: center;
 }
@@ -1756,7 +1756,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
   .home-social-list {
     left: 36px;
     bottom: 30px;
-    font-size: 2.1rem;
+    font-size: 2.6rem;
   }
   .home-social-list::before {
     height: 30px;
@@ -1799,7 +1799,7 @@ html[data-useragent*="MSIE 10.0"] .scrolldown,
   .home-social-list {
     left: 30px;
     bottom: 30px;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
   .home-social-list::before {
     height: 24px;
